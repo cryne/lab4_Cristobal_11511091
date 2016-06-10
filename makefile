@@ -1,6 +1,6 @@
 play: soldado.o escuadron.o arquero.o coraza.o asesino.o main.o
 	g++ soldado.o escuadron.o arquero.o coraza.o asesino.o main.o -o play
-main.o: soldado.h escuadron.h arquero.h coraza.h asesino.h
+main.o: main.cpp soldado.h escuadron.h arquero.h coraza.h asesino.h
 	g++ -c main.cpp
 soldado.o: soldado.cpp soldado.h
 	g++ -c soldado.cpp
