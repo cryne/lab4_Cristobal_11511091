@@ -3,7 +3,7 @@
 #include "soldado.h"
 using std::string;
 
-class Coraza
+class Coraza:public Soldado
 {
 	double dureza;
 	double lanzas;

@@ -3,7 +3,7 @@
 #include "soldado.h"
 using std::string;
 
-class Asesino
+class Asesino:public Soldado
 {
 	double asesinatos;
 	double sigilo;
