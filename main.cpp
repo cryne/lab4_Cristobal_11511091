@@ -14,17 +14,17 @@ int main(int argc, char const *argv[])
 {
 	int opcion=6;
 	int contador=0;
-
+	vector<Escuadron*> legion;
 	while(opcion!=0){
 		string nombre;
 		cout<<"ingresa el nombre del nuevo Escuadron " <<endl;	
 		cin>>nombre;
 		int opcion2=1;
+		vector<Soldado*> ejercito;
 		while(opcion2!=0){
 			int opcion3;
 			cout<<"que tipo de soldado desea agregar al escuadron\n1-Arquero\n2-Corazas\n3-Asesinos"<<endl;
-			cin>>opcion3;
-			vector<Soldado*> ejercito;
+			cin>>opcion3;			
 			if (opcion3==1)
 			{
 				string nombres,ciudad;
@@ -82,12 +82,19 @@ int main(int argc, char const *argv[])
 			cout<<"desea continuar agregando mas soldados\n1-si\n0-no"<<endl;
 			cin>>opcion2;
 		}
-		if(contador>=8){
-			cout<<"desea continuar agregando Escuadrones"<<endl;
+		legion.push_back(new Escuadron(nombre,ejercito));
+		cout<<"escuadron agregado exitosamente"<<endl;
+		if(contador>=7){
+			cout<<"desea continuar agregando Escuadrones\n1-si\n0-no"<<endl;
+			cin>>opcion;
 			contador++;
 		}else{
 			contador++;			
 		}
+	}
+	for (int i = 0; i < legion.size(); ++i)
+	{
+		cout<<legion[i]->toString();
 	}
 	return 0;
 }
