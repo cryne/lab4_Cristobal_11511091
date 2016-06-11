@@ -6,8 +6,7 @@
 using std::string;
 using std::stringstream;
 
-Coraza::Coraza(string nombre,string ciudad,int edad,double dureza,double lanzas){
-	Soldado(nombre,ciudad,edad);
+Coraza::Coraza(string nombre,string ciudad,int edad,double dureza,double lanzas):Soldado(nombre,ciudad,edad){
 	this->dureza=dureza;
 	this->lanzas=lanzas;
 }

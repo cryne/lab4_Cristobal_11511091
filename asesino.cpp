@@ -6,8 +6,7 @@
 using std::string;
 using std::stringstream;
 
-Asesino::Asesino(string nombre,string ciudad,int edad,double asesinatos,double sigilo){
-	Soldado(nombre,ciudad,edad);
+Asesino::Asesino(string nombre,string ciudad,int edad,double asesinatos,double sigilo):Soldado(nombre,ciudad,edad){
 	this->asesinatos=asesinatos;
 	this->sigilo=sigilo;
 }

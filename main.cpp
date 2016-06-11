@@ -79,7 +79,7 @@ int main(int argc, char const *argv[])
 				ejercito.push_back(new Asesino(nombres,ciudad,edad,asesinatos,sigilo));
 				cout<<"soldado agregado exitosamente"<<endl;
 			}
-			cout<<"desea continuar agregando mas soldados\n1-si\n0-no"<<<endl;
+			cout<<"desea continuar agregando mas soldados\n1-si\n0-no"<<endl;
 			cin>>opcion2;
 		}
 		if(contador>=8){
